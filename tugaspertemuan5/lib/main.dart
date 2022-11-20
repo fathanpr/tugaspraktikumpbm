@@ -34,7 +34,7 @@ class _PageSatuState extends State<PageSatu> {
     setState(() {
       _isBool = !_isBool;
       if(_isBool == true){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => DashboardPage(),));
+        Navigator.of(context).push(MaterialPageRoute(builder:(context) => DashboardPage(),));
         print("BERHASIL LOGIN");
         print(_isBool);
       }else{
@@ -50,7 +50,7 @@ class _PageSatuState extends State<PageSatu> {
     setState(() {
       _isBool = prefs.getBool('isbool') ?? _isBool;
       if(_isBool == true){
-        Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) => DashboardPage(),));
+        Navigator.of(context).push(MaterialPageRoute(builder:(context) => DashboardPage(),));
         print(_isBool);
         print("SUDAH LOGIN");
       }else{
